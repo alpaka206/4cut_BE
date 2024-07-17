@@ -1,5 +1,5 @@
 //prod.js
 
 module.exports = {
-  mongoURI: process.env.MONGO.URI,
+  mongoURI: process.env.MONGO_URI,
 };

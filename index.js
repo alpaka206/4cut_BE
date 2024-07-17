@@ -4,7 +4,7 @@ const cookieParser = require("cookie-parser");
 const connectDB = require("./db");
 const userRoutes = require("./routes/users");
 const frameRoutes = require("./routes/frame");
-const path = require("path");
+// const path = require("path");
 // const fs = require("fs");
 
 const app = express();
@@ -24,5 +24,9 @@ connectDB();
 
 app.use("/api/users", userRoutes);
 app.use("/api/frame", frameRoutes);
+
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 
 module.exports = app;
